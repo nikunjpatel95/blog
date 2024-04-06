@@ -53,21 +53,18 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
+    {% for post in posts reversed %}  <!-- this helps to reverse the loop-->
     <div class="card">
       <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
-        <h2>Title Heading</h2>
-        <h5>April 1, 2024</h5>
-        <p>Text</p>
+        <h2>{{post.title}}</h2>
+        <h5>{{post.created_date}}</h5>
+        <p>{{post.description}}</p>
       </a>
     </div>
+    {% endfor %}
 
-    <div class="card">
-        <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
-          <h2>Title Heading</h2>
-          <h5>April 1, 2024</h5>
-          <p>Text</p>
-        </a>
-      </div>
+
+    
   </div>
 </div>
 
