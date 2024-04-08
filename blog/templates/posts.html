@@ -53,15 +53,12 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
-    {% for post in posts reversed %}  <!-- this helps to reverse the loop-->
+  
     <div class="card">
-      <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
-        <h2>{{post.title}}</h2>
-        <h5>{{post.created_date}}</h5>
-        <p>{{post.description|truncatewords:7}}</p> <!--will only show 7 words in description-->
-      </a>
+        <h1>{{posts.title}}</h1>
+        <h5>{{posts.created_date}}</h5>
+        <p>{{posts.description}}</p> <!--will only show 7 words in description-->
     </div>
-    {% endfor %}
 
 
     
